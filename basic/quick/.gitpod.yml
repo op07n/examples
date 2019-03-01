@@ -1,0 +1,12 @@
+ports:
+  - port: 8080
+checkoutLocation: "src/github.com/op07n/examples/new/master/basic/quick"
+workspaceLocation: "."
+tasks:
+  - init: >
+      cd /workspace/src/github.com/op07n/examples/new/master/basic/quick &&
+      go get -v ./... &&
+      go build -o app
+    command: >
+      cd /workspace/src/github.com/op07n/examples/new/master/basic/quick &&
+      ./app
